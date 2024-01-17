@@ -21,7 +21,29 @@
     document.querySelector('body').style.color='white';">
   <input type="button" value="day" onClick="
     document.querySelector('body').style.backgroundColor='white'
-    document.querySelector('body').style.color='black';"">
+    document.querySelector('body').style.color='black';">
+
+    <input id = 'night_day' type="button" value="night" onClick="
+    if(document.querySelector('#night_day').value==='night'){
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    document.querySelector('#night_day').value='day';
+
+  } else{
+      document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    document.querySelector('#night_day').value='night';
+
+      }">
+    <br>
+    <h3>1===1</h3>
+    <script>
+    document.write(1===1);
+    </script>
+    <h3>1===2</h3>
+    <script>
+    document.write(1===3);
+    </script>
 
 
 </body>
