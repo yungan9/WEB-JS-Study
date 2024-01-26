@@ -1,26 +1,33 @@
+function LinksetColor(color) {
+  var alist = document.querySelectorAll("a");
+  var i = 0;
+  while (i < alist.length) {
+    alist[i].style.color = color;
+    i = i + 1;
+  }
+}
+
+function BodysetColor(color) {
+  document.querySelector("body").style.color = color;
+}
+
+function BodysetBackgroundColor(color) {
+  document.querySelector("body").style.backgroundColor = color;
+}
+
 function nightDayHandler(self) {
   var target = document.querySelector("body");
   if (self.value === "night") {
-    target.style.backgroundColor = "black";
-    target.style.color = "white";
+    BodysetBackgroundColor("black");
+    BodysetColor("white");
     self.value = "day";
 
-    var alist = document.querySelectorAll("a");
-    var i = 0;
-    while (i < alist.length) {
-      alist[i].style.color = "powderblue";
-      i = i + 1;
-    }
+    LinksetColor("powderblue");
   } else {
-    target.style.backgroundColor = "white";
-    target.style.color = "black";
+    BodysetBackgroundColor("white");
+    BodysetColor("black");
     self.value = "night";
 
-    var alist = document.querySelectorAll("a");
-    var i = 0;
-    while (i < alist.length) {
-      alist[i].style.color = "blue";
-      i = i + 1;
-    }
+    LinksetColor("blue");
   }
 }
