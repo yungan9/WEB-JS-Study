@@ -11,8 +11,8 @@
 
 > ## JavaScript 강의
 > 
-> https://opentutorials.org/course/3085
+> [JavaScript](https://opentutorials.org/course/3085)
 
 > ## React 강의
 > 
-> https://www.inflearn.com/course/react-%EC%83%9D%ED%99%9C%EC%BD%94%EB%94%A9/dashboard
+> [React](https://www.inflearn.com/course/react-%EC%83%9D%ED%99%9C%EC%BD%94%EB%94%A9/dashboard)
