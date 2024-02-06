@@ -8,24 +8,23 @@ class TOC extends Component {
     while (i < data.length) {
       lists.push(
         <li key={data[i].id}>
-          <a href={"/content/" + data[i].id}></a>
+          <a
+            href={"/content/" + data[i].id}
+            data-id={data[i].id}
+            onClick={function (e) {
+              e.preventDefault();
+              this.props.onChangePage(e.target.dataset.id);
+            }.bind(this)}
+          >
+            {data[i].title}
+          </a>
         </li>
       );
       i = i + 1;
     }
     return (
       <nav>
-        <ul>
-          <li>
-            <a href="1. html">HTML</a>
-          </li>
-          <li>
-            <a href="2. html">CSS</a>
-          </li>
-          <li>
-            <a href="3. html">JavaScript</a>
-          </li>
-        </ul>
+        <ul>{lists}</ul>
       </nav>
     );
   }
