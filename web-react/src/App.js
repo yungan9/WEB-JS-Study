@@ -8,7 +8,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      mode: "welcome",
+      mode: "read",
       subject: { title: "WEB", sub: "world wide web!" },
       welcome: { title: "Welcome", desc: "ridkdkdkdkr" },
       contents: [
@@ -31,23 +31,29 @@ class App extends Component {
     }
     return (
       <div className="App">
-        {/* <Subject
+        <Subject
           title={this.state.subject.title}
           sub={this.state.subject.sub}
-        ></Subject> */}
-        <header>
+          onChangePage={function () {
+            this.setState({ mode: "welcome" });
+          }.bind(this)}
+        ></Subject>
+        {/* <header>
           <h1>
             <a
               href="/"
               onClick={function (e) {
                 e.preventDefault();
-              }}
+                this.setState({
+                  mode: "welcome",
+                });
+              }.bind(this)}
             >
               {this.state.subject.title}
             </a>
           </h1>
           {this.state.subject.sub}
-        </header>
+        </header> */}
         <TOC data={this.state.contents}></TOC>
         <Content title={_title} desc={_desc}></Content>
       </div>
